@@ -11,6 +11,10 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from "./register/RegisterComponent";
 import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -19,6 +23,7 @@ import { RouterModule } from '@angular/router';
     AppComponent,
       LoginComponent,
       RegisterComponent,
+      NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +32,9 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     MatInputModule,
     MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
     RouterModule.forRoot([
       {path: '', component: LoginComponent},
       {path: 'register', component: RegisterComponent}
