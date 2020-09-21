@@ -9,6 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from "./register/RegisterComponent";
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,6 +18,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
       LoginComponent,
+      RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,11 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    RouterModule.forRoot([
+      {path: '', component: LoginComponent},
+      {path: 'register', component: RegisterComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
