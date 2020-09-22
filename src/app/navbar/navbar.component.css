@@ -5,3 +5,7 @@
 a:hover{
     color: rgb(230, 59, 59);
 }
+
+mat-nav-list{
+    padding-top: 25px;
+}

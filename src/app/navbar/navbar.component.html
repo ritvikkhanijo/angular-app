@@ -1,7 +1,7 @@
 <mat-toolbar color="primary" class=sticky-top>
     <mat-toolbar-row>
 
-        <button mat-icon-button>
+        <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
         <span>Rent a car</span>
@@ -12,5 +12,22 @@
         </div>
 
     </mat-toolbar-row>
-
 </mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <a mat-list-item><mat-icon>calendar_today</mat-icon>Manage reservations</a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item><mat-icon>drive_eta</mat-icon>Add car</a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item><mat-icon>person_add_disabled</mat-icon>My Users</a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item><mat-icon>home</mat-icon>Main Page</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+</mat-sidenav-container>
