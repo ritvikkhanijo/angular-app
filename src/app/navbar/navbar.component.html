@@ -4,7 +4,8 @@
         <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
-        <span>Rent a car</span>
+        <span>
+            <a routerLink="/">Rent a car</a></span>
         <span class="spacer"></span>
         <div>
             <a routerLink="/" mat-button><mat-icon>power_settings_new</mat-icon>Login</a>
@@ -17,16 +18,24 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav>
         <mat-nav-list>
-            <a mat-list-item><mat-icon>calendar_today</mat-icon>Manage reservations</a>
+            <a mat-list-item routerLink="/manage">
+                <mat-icon>calendar_today</mat-icon>Manage reservations
+            </a>
         </mat-nav-list>
         <mat-nav-list>
-            <a mat-list-item><mat-icon>drive_eta</mat-icon>Add car</a>
+            <a mat-list-item routerLink="/create-car">
+                <mat-icon>drive_eta</mat-icon>Add car
+            </a>
         </mat-nav-list>
         <mat-nav-list>
-            <a mat-list-item><mat-icon>person_add_disabled</mat-icon>My Users</a>
+            <a mat-list-item routerLink="/users">
+                <mat-icon>person_add_disabled</mat-icon>My Users
+            </a>
         </mat-nav-list>
         <mat-nav-list>
-            <a mat-list-item><mat-icon>home</mat-icon>Main Page</a>
+            <a mat-list-item routerLink="/main">
+                <mat-icon>home</mat-icon>Main Page
+            </a>
         </mat-nav-list>
     </mat-sidenav>
     <router-outlet></router-outlet>

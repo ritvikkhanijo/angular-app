@@ -17,6 +17,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { ManageReservationsComponent } from './manage-reservations/manage-reservations.component';
+import { CreateCarComponent } from './create-car/create-car.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { AdminUsersComponent } from './admin-users/admin-users.component';
 
 
 
@@ -26,6 +31,11 @@ import { MatListModule } from '@angular/material/list';
       LoginComponent,
       RegisterComponent,
       NavbarComponent,
+      ManageReservationsComponent,
+      CreateCarComponent,
+      MainPageComponent,
+      DatePickerComponent,
+      AdminUsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,8 +50,34 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatListModule,
     RouterModule.forRoot([
-      {path: '', component: LoginComponent},
-      {path: 'register', component: RegisterComponent}
+      {
+        path: '', 
+        component: LoginComponent
+      },
+      {
+        path: 'register', // here we don't use slash ('/') before the path
+        component: RegisterComponent
+      },
+      {
+        path: 'main', 
+        component: MainPageComponent
+      },
+      {
+        path: 'create-car', 
+        component: CreateCarComponent
+      },
+      {
+        path: 'manage', 
+        component: ManageReservationsComponent
+      },
+      {
+        path: 'date',
+        component: DatePickerComponent
+      },
+      {
+        path: 'users',
+        component: AdminUsersComponent
+      }
     ])
   ],
   providers: [],
