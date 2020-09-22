@@ -1,4 +1,4 @@
-<div style="height: 100vh; overflow: hidden;">
+<div style="height: calc(100vh - 64px); overflow: hidden;"> <!-- calc = viewport height less material toolbar default height (64px) -->
     <mat-card>
         <form (submit)="onlogin(loginform)" #loginform="ngForm">
             <mat-form-field appearance="fill">
