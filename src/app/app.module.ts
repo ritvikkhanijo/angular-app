@@ -22,6 +22,8 @@ import { CreateCarComponent } from './create-car/create-car.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -49,6 +51,8 @@ import { AdminUsersComponent } from './admin-users/admin-users.component';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
     RouterModule.forRoot([
       {
         path: '', 
