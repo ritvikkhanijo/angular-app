@@ -24,6 +24,8 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { UserService } from './user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -40,6 +42,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
       AdminUsersComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
@@ -84,7 +87,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
       }
     ])
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
