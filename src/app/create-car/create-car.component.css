@@ -1,0 +1,14 @@
+.container{
+    max-width: 60%;
+    margin: 70px auto auto auto;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+button[type="button"]{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+}
