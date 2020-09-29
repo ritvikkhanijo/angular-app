@@ -1,10 +1,15 @@
 // import the module http included in NodeJS and make it a const
 const http = require('http');
+// import the Express app we created (app.js) as a const
+const app = require('./backend/app');
 
-// use this const http for the function createServer (takes 2 args: request and response)
-const server = http.createServer((req, res) => {
-    res.end('hello');
-});
+// create a const to save the port
+const port = process.env.PORT || 3000;
+// set the port for the app
+app.set('port', port);
 
-// make the server listen to a port (different to the Angular app)
-server.listen(process.env.PORT || 3000);
+// pass the Express app as an argument to the server
+const server = http.createServer(app);
+
+// make the server listen to the port (different to the Angular app)
+server.listen(port);
