@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 // set the response of the Express app
 app.use((req, res, _next) => {
-    res.send('This is a response');
+    res.send('This is a blank page');
 });
 
 // export the app to connect it with the js server
