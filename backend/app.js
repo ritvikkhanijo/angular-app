@@ -14,11 +14,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json())
 
-/* set the response of the Express app (no longer needed: logic in user.js)
-app.use((req, res, _next) => {
-    res.send('This is a blank page');
-}); */
-
 // save user.js as a const  
 const userRoutes = require('./user');
 // set the static part of the login URL (DRY)
