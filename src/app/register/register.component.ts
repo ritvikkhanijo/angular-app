@@ -14,6 +14,12 @@ export class RegisterComponent{
   onRegister(form: NgForm){
     const email = form.value.email;
     const pass = form.value.password;
-    this.userservice.createUser(email, pass).subscribe(console.log('ok'));
+    const authSet = {
+      email: email,
+      password: pass
+    }; 
+    this.userservice.createUser(email, pass).subscribe(res =>{
+      console.log(authSet);
+    });
   }
 }
