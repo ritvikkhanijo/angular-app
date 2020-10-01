@@ -7,6 +7,20 @@ const cors = require('cors');
 // import body-parser (we installed it with npm) as a const
 const bodyParser = require('body-parser');
 
+// import Mongoose (MongoDB ODM) as a const
+const mongoose = require('mongoose');
+
+// establish connection with MongoDB database
+const uri = 'mongodb+srv://jlinaresmar:M0n60D8MEANclu573r@cluster0.woeks.mongodb.net/MEAN_app?retryWrites=true&w=majority'
+
+mongoose.connect(uri, {
+    useNewUrlParser: true
+    })
+    .then(() =>{
+        console.log('Connected')
+    })
+    .catch(err => console.log(err));
+
 // create an Express application and save it in a const 
 const app = express();
 
