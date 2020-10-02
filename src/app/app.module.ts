@@ -87,7 +87,7 @@ import { HttpClientModule } from '@angular/common/http';
       }
     ])
   ],
-  providers: [UserService],
+  providers: [UserService,LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
